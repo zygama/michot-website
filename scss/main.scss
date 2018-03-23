@@ -1,0 +1,28 @@
+// compileCompressed: ../src/css/stylesheet.css
+
+@import "variables"; // $colorX
+@import "header";
+@import "banner";
+@import "about";
+@import "realisations";
+@import "footer";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+section {
+  padding-bottom: 50px;
+
+  h1 {
+    color: $color3;
+  }
+}
+
+.section-title {
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 40px;
+}

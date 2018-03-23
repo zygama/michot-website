@@ -1,0 +1,29 @@
+// main: main.scss
+
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: $color1;
+  line-height: 70px;
+  padding: 0 30px; // (top-bot) / (left-right)
+  position: fixed;
+
+  .header-logo {
+    float: left;
+    color: $color4;
+  }
+
+  .header-menu {
+    float: right;
+
+    a {
+      color: $color4;
+      margin-right: 15px;
+
+      &:hover {
+        color: $color3;
+        text-decoration: none;
+      }
+    }
+  }
+}

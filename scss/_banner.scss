@@ -1,0 +1,20 @@
+// main: main.scss
+
+.banner {
+  background: url("../img/bg-img2.jpg") no-repeat;
+  background-position: 50% 48%; // x% y% centring (the best centering I found)
+  background-size: cover;
+  height: 100vh;
+
+  .banner-content {
+    padding-top: 40vh;
+    text-align: center;
+    color: $color4;
+
+    .arrow-bot-icon {
+      margin-top: 35vh;
+      color: $color3;
+      font-size: 50px;
+    }
+  }
+}
