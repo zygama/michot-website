@@ -6,14 +6,17 @@
 @import "about";
 @import "realisations";
 @import "footer";
+@import "contact";
 
 html,
 body {
   height: 100%;
   margin: 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 section {
+  padding-top: 50px;
   padding-bottom: 50px;
 
   h1 {
@@ -23,6 +26,6 @@ section {
 
 .section-title {
   text-align: center;
-  padding-top: 50px;
-  margin-bottom: 40px;
 }
+
+

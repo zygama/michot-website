@@ -7,16 +7,39 @@
   line-height: 70px;
   padding: 0 30px; // (top-bot) / (left-right)
   position: fixed;
+  z-index: 1;
 
   .header-logo {
     float: left;
-    color: $color4;
+
+    .header-logo-text {
+      float: right;
+      color: $color4;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 70px;
+    }
+
+    .logo-company-header {
+      float: left;
+      margin-top: 5px;
+      margin-right: 7px;
+      width: 60px;
+      height: 60px;
+
+      object {
+        width: 60px;
+        height: 60px;
+        pointer-events: none;
+      }
+    }
   }
 
   .header-menu {
     float: right;
 
-    a {
+    a, span {
       color: $color4;
       margin-right: 15px;
 

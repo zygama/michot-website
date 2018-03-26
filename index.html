@@ -6,10 +6,11 @@
 		<!-- CSS -->
 		<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"> -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-		<link rel="stylesheet" href="src/css/stylesheet.css">
+		<link rel="stylesheet" href="src/css/main.css">
 		<!-- CSS -->
 
 		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
 		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 		<!-- Fonts -->
 
@@ -28,12 +29,19 @@
 
 		<!-- HEADER -->
 		<header class="header">
-			<a href="#" class="header-logo">Michot Carrelage Logo</a>
+			<div class="header-logo">
+				<a href="#" style="display: inline-block;">
+					<div class="logo-company-header">
+						<object data="./src/img/logo_michot.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+					</div>
+				</a>
+				<a href="#" class="header-logo-text">Michot Carrelage</a>
+			</div>
 			<nav class="header-menu">
-				<a href="#">Accueil</a>
-				<a href="#about">À Propos</a>
-				<a href="#realisations">Nos Réalisations</a>
-				<a href="#contact">Contact</a>
+				<a id="link-home" href="#">Accueil</a>
+				<a id="link-about" href="#about">À Propos</a>
+				<a id="link-realisations" href="#realisations">Nos Réalisations</a>
+				<a id="link-contact" href="#contact">Contact</a>
 			</nav>
 		</header>
 		<!-- HEADER -->
@@ -41,10 +49,19 @@
 		<!-- BANNER -->
 		<div class="block">
 			<div class="banner">
-				<div class="banner-content">
-					<h1>Bienvenue sur le site de notre entreprise Michot Carrelage</h1>
-					<h2>Vous pourrez y découvrir notre entreprise, nos réalisations ainsi que nos coordonnées afin de nous contacter</h2>
-					<i class="fas fa-arrow-down arrow-bot-icon"></i>
+				<div class="banner-content">						
+					<div class="row inline-block-home">
+							<div class="col-4 logo-company-banner">
+								<object data="./src/img/logo_michot.svg" type="image/svg+xml"></object>
+							</div>
+							<div class="col-8 banner-text">
+								<h1>Bienvenue sur le site de notre entreprise Michot Carrelage</h1>
+								<h2>Vous pourrez y découvrir notre entreprise, nos réalisations ainsi que nos coordonnées afin de nous contacter</h2>
+							</div>
+					</div>		
+					<div id="arrow-down-icon">
+						<p id="arrow"><i class="fas fa-arrow-down"></i></p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -52,7 +69,7 @@
 
 		<!-- PRESENTATION DE L'ENTREPRISE -->
 		<section id="about">
-			<div class="container about">
+			<div class="container">
 				<h1 class="section-title">Qui Sommes Nous ?</h1>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, in sint distinctio praesentium libero ex expedita est eveniet ab ipsum laboriosam incidunt rem inventore, error cum at, possimus placeat voluptatem.</p>
 			</div>
@@ -69,36 +86,36 @@
 		<!-- RÉALISATIONS  -->
 
 		<!-- CONTACT -->
-		<section id="contact">
-			<div class="container">
+		<section id="contact" class="container">
 				<h1 class="section-title">Contact</h1>
-
 				<form>
 
-				  <div class="form-row">
-				    <div class="form-group col-md-6">
-				      <label for="contact-firstname">Prénom</label>
-				      <input type="text" class="form-control" id="contact-firstname" placeholder="Michel">
-				    </div>
-				    <div class="form-group col-md-6">
-				      <label for="contact-lastname">Nom</label>
-				      <input type="text" class="form-control" id="contact-lastname" placeholder="Dupont">
-				    </div>
-				  </div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+							<label for="contact-firstname">Prénom</label>
+							<input type="text" class="form-control" id="contact-firstname" placeholder="Michel">
+						</div>
+						<div class="form-group col-md-6">
+							<label for="contact-lastname">Nom</label>
+							<input type="text" class="form-control" id="contact-lastname" placeholder="Dupont">
+						</div>
+					</div>
 
 					<div class="form-group">
-				    <label for="contact-email-area">Adresse Email</label>
-				    <input type="email" class="form-control" id="contact-email-area" placeholder="nom@exemple.com">
-				  </div>
+						<label for="contact-email-area">Adresse Email</label>
+						<input type="email" class="form-control" id="contact-email-area" placeholder="nom@exemple.com">
+					</div>
 
-				  <div class="form-group">
-				    <label for="contact-text-message">Votre Message</label>
-				    <textarea class="form-control" id="contact-text-message" rows="5"></textarea>
-				  </div>
+					<div class="form-group">
+						<label for="contact-text-message">Votre Message</label>
+						<textarea class="form-control" id="contact-text-message" rows="5"></textarea>
+					</div>
+
+					<div class="button-container">
+						<button class="btn btn-primary">Envoyer</button>
+					</div>
 
 				</form>
-
-			</div>
 		</section>
 		<!-- CONTACT -->
 
@@ -108,8 +125,11 @@
 		</footer>
 		<!-- FOOTER -->
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<!-- My JavaScript  -->
+		<script src="./src/js/script.js"></script>
+		<!-- My JavaScript  -->
 	</body>
 </html>

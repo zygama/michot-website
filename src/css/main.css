@@ -1,0 +1,123 @@
+.header {
+  height: 70px;
+  width: 100%;
+  background-color: #222831;
+  line-height: 70px;
+  padding: 0 30px;
+  position: fixed;
+  z-index: 1; }
+  .header .header-logo {
+    float: left; }
+    .header .header-logo .header-logo-text {
+      float: right;
+      color: #eee;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      line-height: 70px; }
+    .header .header-logo .logo-company-header {
+      float: left;
+      margin-top: 5px;
+      margin-right: 7px;
+      width: 60px;
+      height: 60px; }
+      .header .header-logo .logo-company-header object {
+        width: 60px;
+        height: 60px;
+        pointer-events: none; }
+  .header .header-menu {
+    float: right; }
+    .header .header-menu a, .header .header-menu span {
+      color: #eee;
+      margin-right: 15px; }
+      .header .header-menu a:hover, .header .header-menu span:hover {
+        color: #00adb5;
+        text-decoration: none; }
+
+.banner {
+  background: url("../img/bg-img2.jpg") no-repeat;
+  background-position: 50% 48%;
+  background-size: cover;
+  height: 100vh; }
+  .banner .banner-content {
+    color: #eee; }
+    .banner .banner-content .inline-block-home {
+      padding-top: 20vh;
+      align-items: center; }
+    .banner .banner-content .banner-text h1 {
+      font-weight: medium;
+      font-size: 3.0vw; }
+    .banner .banner-content .banner-text h2 {
+      font-size: 2.0vw;
+      font-weight: 400; }
+    .banner .banner-content .logo-company-banner object {
+      margin-left: 2vw;
+      width: 28vw; }
+    .banner .banner-content #arrow-down-icon {
+      color: #00adb5;
+      font-size: 50px;
+      position: absolute;
+      top: 85vh;
+      z-index: 0;
+      width: 100%;
+      text-align: center; }
+      .banner .banner-content #arrow-down-icon:hover {
+        opacity: 0.5; }
+
+.about {
+  text-align: center; }
+
+.realisations-container {
+  background-color: #393e46; }
+  .realisations-container .realisations {
+    text-align: center;
+    color: #eee; }
+    .realisations-container .realisations .realisations-text {
+      text-align: center; }
+
+footer {
+  background-color: #eee; }
+  footer .author {
+    float: right;
+    font-size: 1em;
+    margin: 0; }
+    footer .author a {
+      color: #00adb5;
+      margin-right: 10px; }
+      footer .author a:hover {
+        text-decoration: none; }
+
+#contact textarea {
+  border-radius: 0; }
+#contact input {
+  border-radius: 0; }
+#contact .button-container {
+  text-align: center; }
+  #contact .button-container button {
+    background: #00adb5;
+    border-radius: 0;
+    border-color: transparent; }
+    #contact .button-container button:hover {
+      border-width: 2;
+      border-color: #007177;
+      box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 173, 181, 0.6); }
+#contact .form-control:focus {
+  border-color: #00adb5;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(0, 173, 181, 0.6); }
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Raleway', sans-serif; }
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px; }
+  section h1 {
+    color: #00adb5; }
+
+.section-title {
+  text-align: center; }
+
+/*# sourceMappingURL=main.css.map */

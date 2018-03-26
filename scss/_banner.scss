@@ -7,14 +7,42 @@
   height: 100vh;
 
   .banner-content {
-    padding-top: 40vh;
-    text-align: center;
     color: $color4;
 
-    .arrow-bot-icon {
-      margin-top: 35vh;
+    .inline-block-home {
+      padding-top: 20vh;
+      align-items: center;
+    }
+
+    .banner-text {
+      h1 {
+      font-weight: medium;
+      font-size: 3.0vw;
+      }
+      
+      h2 {
+        font-size: 2.0vw;
+        font-weight: 400;
+      }
+    }
+
+    .logo-company-banner {
+      object {
+        margin-left: 2vw;
+        width: 28vw;
+      }
+    }
+
+    #arrow-down-icon {
       color: $color3;
       font-size: 50px;
+      position: absolute;  // absolute to be placed where I want
+      top: 85vh;           // Arrow placed at the bottom of the page
+      z-index: 0;
+      width: 100%;
+      text-align: center;
+      
+      &:hover { opacity: 0.5; }
     }
   }
 }
