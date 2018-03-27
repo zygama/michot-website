@@ -3,10 +3,24 @@
 .realisations-container {
   background-color: $color2;
 
-  .realisations {
+  .realisations-heading {
     text-align: center;
     color: $color4;
   }
 
+  .gallery-pictures {
+    
+    .pictures-container {
+      text-align: center;
+
+      .picture-realisation {
+        background-image: url("../../src/img/photos/cuisines/photo-1.jpg");
+        background-position: center;
+        background-size: cover;
+        height: 240px;
+        width: 360px;
+        margin: 10px auto;
+      }
+    }
   }
 }

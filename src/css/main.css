@@ -69,22 +69,18 @@
 
 .realisations-container {
   background-color: #393e46; }
-  .realisations-container .realisations {
+  .realisations-container .realisations-heading {
     text-align: center;
     color: #eee; }
-  .realisations-container .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    /* Create four equal columns that sits next to each other */ }
-    .realisations-container .row .column {
-      flex: 25%;
-      max-width: 25%;
-      padding: 0 4px; }
-      .realisations-container .row .column img {
-        max-width: 25vw;
-        margin-right: 84px;
-        vertical-align: middle; }
+  .realisations-container .gallery-pictures .pictures-container {
+    text-align: center; }
+    .realisations-container .gallery-pictures .pictures-container .picture-realisation {
+      background-image: url("../../src/img/photos/cuisines/photo-1.jpg");
+      background-position: center;
+      background-size: cover;
+      height: 240px;
+      width: 360px;
+      margin: 10px auto; }
 
 footer {
   background-color: #eee; }
