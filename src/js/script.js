@@ -48,7 +48,48 @@ function onClickListeners() {
     });
 }
 
-onClickListeners();
+function load(p_placeOfPicture) {
+    let fileExt = '.jpg';
+    let picturesFiles = {
+        "kitchen": [],
+        "floor": [],
+        "terrace": [],
+        "bathroom": []
+    };
 
+    // picturesPlace will receive the three div which will contain pictures for a taled place (kitchen, bathroom, etc...)
+    let picturesPlace = $(`.${p_placeOfPicture}-picture`);
+    console.log(picturesPlace);
+    
+    $.ajax({
+        // This will retrieve the contents of the folder if the folder is configured as 'browsable'
+        url: `src/img/photos/${p_placeOfPicture}`,
+        success: function (data) {
+            $("#fileNames").html('<ul>');
+            // List all jpg file names in the page
+            $(data).find( `a:contains(${fileExt})` )
+                .each(function (index) {
+                    let filename = this.href.replace(window.location.host, "").replace("http:///", "");
+                    picturesFiles[p_placeOfPicture].push(filename);
+                    
+                    // add the image via background CSS using echoJS (for loading images)
+                    picturesPlace.eq(index).attr("data-echo-background", filename); 
+
+                    if (index >= 2) { // break after the 3 pictures are shown for the given place (kitchen, bathroom, etc..)
+                        return false; // this a break; of a each loop in jQuery
+                    }
+                });
+            console.log(picturesFiles);
+            
+            
+        }
+    });
+}
+
+onClickListeners();
+load("kitchen");
+load("floor");
+load("terrace");
+load("bathroom");
 
 
