@@ -72,8 +72,19 @@
   .realisations-container .realisations {
     text-align: center;
     color: #eee; }
-    .realisations-container .realisations .realisations-text {
-      text-align: center; }
+  .realisations-container .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+    /* Create four equal columns that sits next to each other */ }
+    .realisations-container .row .column {
+      flex: 25%;
+      max-width: 25%;
+      padding: 0 4px; }
+      .realisations-container .row .column img {
+        max-width: 25vw;
+        margin-right: 84px;
+        vertical-align: middle; }
 
 footer {
   background-color: #eee; }
