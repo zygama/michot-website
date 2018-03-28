@@ -43,7 +43,9 @@
     color: #eee; }
     .banner .banner-content .inline-block-home {
       padding-top: 20vh;
-      align-items: center; }
+      align-items: center;
+      margin-left: 0;
+      margin-right: 0; }
     .banner .banner-content .banner-text h1 {
       font-weight: medium;
       font-size: 3.0vw; }
@@ -51,7 +53,6 @@
       font-size: 2.0vw;
       font-weight: 400; }
     .banner .banner-content .logo-company-banner object {
-      margin-left: 2vw;
       width: 28vw; }
     .banner .banner-content #arrow-down-icon {
       color: #00adb5;
@@ -68,21 +69,30 @@
   text-align: center; }
 
 .realisations-container {
-  background-color: #393e46; }
+  background-color: #393e46;
+  padding-left: 5vw;
+  padding-right: 5vw; }
   .realisations-container .realisations-heading {
     text-align: center;
     color: #eee; }
-  .realisations-container .gallery-pictures .pictures-container {
-    text-align: center; }
-    .realisations-container .gallery-pictures .pictures-container .picture-realisation {
-      background-position: center;
-      background-size: cover;
-      height: 240px;
-      width: 360px;
-      margin: 10px auto;
-      border-radius: 1px;
-      border: 1.5px solid rgba(0, 173, 181, 0.6);
-      box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3); }
+  .realisations-container .gallery-pictures {
+    padding-bottom: 25px; }
+    .realisations-container .gallery-pictures h2 {
+      color: #eee; }
+    .realisations-container .gallery-pictures a {
+      float: right;
+      margin-top: 20px;
+      color: #00adb5; }
+    .realisations-container .gallery-pictures .pictures-container {
+      text-align: center; }
+      .realisations-container .gallery-pictures .pictures-container .picture-realisation {
+        background-position: center;
+        background-size: cover;
+        height: 240px;
+        width: 360px;
+        margin: 10px auto;
+        border-radius: 1px;
+        box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3); }
 
 footer {
   background-color: #eee; }

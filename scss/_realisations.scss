@@ -2,6 +2,8 @@
 
 .realisations-container {
   background-color: $color2;
+  padding-left: 5vw;
+  padding-right: 5vw;
 
   .realisations-heading {
     text-align: center;
@@ -9,7 +11,18 @@
   }
 
   .gallery-pictures {
-    
+    padding-bottom: 25px;
+
+    h2 {
+      color: $color4;
+    }
+
+    a {
+      float: right;
+      margin-top: 20px;
+      color: $color3;
+    }
+
     .pictures-container {
       text-align: center;
 
@@ -20,7 +33,7 @@
         width: 360px;
         margin: 10px auto;
         border-radius: 1px;
-        border: 1.5px solid rgba(0, 173, 181, 0.6);
+        // border: 1.5px solid rgba(0, 173, 181, 0.6);
         box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3);
       }
     }

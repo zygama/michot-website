@@ -12,6 +12,8 @@
     .inline-block-home {
       padding-top: 20vh;
       align-items: center;
+      margin-left: 0;   // Hack to avoid the problem of horizontal overflow
+      margin-right: 0;  // Hack to avoid the problem of horizontal overflow
     }
 
     .banner-text {
@@ -28,7 +30,7 @@
 
     .logo-company-banner {
       object {
-        margin-left: 2vw;
+        // margin-left: 2vw;
         width: 28vw;
       }
     }

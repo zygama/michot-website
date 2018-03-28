@@ -48,7 +48,7 @@ function onClickListeners() {
     });
 }
 
-function load(p_placeOfPicture) {
+function loadPicturesForSection(p_placeOfPicture) {
     let fileExt = '.jpg';
     let picturesFiles = {
         "kitchen": [],
@@ -76,7 +76,7 @@ function load(p_placeOfPicture) {
                     picturesPlace.eq(index).attr("data-echo-background", filename); 
 
                     if (index >= 2) { // break after the 3 pictures are shown for the given place (kitchen, bathroom, etc..)
-                        return false; // this a break; of a each loop in jQuery
+                        return false; // this is a break; of a each loop in jQuery
                     }
                 });
             console.log(picturesFiles);
@@ -86,10 +86,17 @@ function load(p_placeOfPicture) {
     });
 }
 
+
+function loadPicturesForAllSections() {
+    loadPicturesForSection("kitchen");
+    loadPicturesForSection("floor");
+    loadPicturesForSection("terrace");
+    loadPicturesForSection("bathroom");
+}
+
 onClickListeners();
-load("kitchen");
-load("floor");
-load("terrace");
-load("bathroom");
+loadPicturesForAllSections();
+
+
 
 
