@@ -33,9 +33,78 @@
         width: 360px;
         margin: 10px auto;
         border-radius: 1px;
-        // border: 1.5px solid rgba(0, 173, 181, 0.6);
         box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
       }
     }
   }
+}
+
+// MODAL PICTURE CSS
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+
+  img {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin-bottom: 100px; // this way if the picture is ending more than 100% of the height the printing will be nicer
+    // animation-name: zoom-in;     // zoom animation when click on thumbnail picture
+    // animation-duration: 0.6s; // zoom animation when click on thumbnail picture
+    animation: zoom-in 0.6s forwards;
+  }
+
+  // .picture-in-modal-zoomed-in {
+  //   margin: auto;
+  //   display: block;
+  //   width: 80%;
+  //   max-width: 700px;
+  //   margin-bottom: 100px; // this way if the picture is ending more than 100% of the height the printing will be nicer
+  //   // animation-name: zoom-in;     // zoom animation when click on thumbnail picture
+  //   // animation-duration: 0.6s; // zoom animation when click on thumbnail picture
+  //   animation: zoom-in 0.6s forwards;
+  // }
+
+  @keyframes zoom-in { // zoom in animation when click on thumbnail picture
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  @keyframes zoom-out { // zoom out animation when click on thumbnail picture
+    0% { transform: scale(1); }
+    100% { transform: scale(0); }
+  }
+
+    /* The Close Button */
+  .button-close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+
+    &:hover,
+    &:focus {
+      color: $color3;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  // Animation transitions
+
 }

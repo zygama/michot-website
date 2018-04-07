@@ -30,9 +30,14 @@
 
     .logo-company-banner {
       object {
-        // margin-left: 2vw;
         width: 28vw;
       }
+    }
+
+    @keyframes arrow-animation {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+      100% { transform: translateY(0); }
     }
 
     #arrow-down-icon {
@@ -43,8 +48,12 @@
       z-index: 0;
       width: 100%;
       text-align: center;
+      animation: arrow-animation 1s infinite;
       
-      &:hover { opacity: 0.5; }
+      svg:hover { 
+        opacity: 0.5;
+         
+      }
     }
   }
 }
