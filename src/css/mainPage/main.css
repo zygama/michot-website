@@ -29,7 +29,8 @@
     float: right; }
     .header .header-menu a, .header .header-menu span {
       color: #eee;
-      margin-right: 15px; }
+      margin-right: 15px;
+      text-decoration: none; }
       .header .header-menu a:hover, .header .header-menu span:hover {
         color: #00adb5; }
 

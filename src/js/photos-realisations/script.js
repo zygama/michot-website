@@ -1,7 +1,7 @@
 const sectionAbout = $("section #about");
 const sectionContact = $("section #contact");
 
-const buttonHome = $("#link-home")
+const buttonHome = $("#link-home");
 const buttonAbout = $("#link-about");
 const buttonRealisations = $("#link-realisations");
 const buttonContact = $("#link-contact");
@@ -21,42 +21,32 @@ const sleep = (p_ms) => {
     });
 }
 
-// const onClickListeners = () => {
-//     buttonHome.click(function (e) {
-//         e.preventDefault(); // The default action of the event will not be triggered (link to #about)
-//         $("html, body").animate({ scrollTop: 0 }, "slow"); // Go to the top of the page
-//     });
+const onClickListeners = () => {
 
-//     buttonAbout.click(function (e) {
-//         let sectionAboutPositionY = document.querySelector('section#about').offsetTop - headerHeight; // Getting Y of target element
+    buttonAbout.click(function (e) {
+        e.preventDefault();
+        location.href='/#about';
+    });
 
-//         e.preventDefault(); // The default action of the event will not be triggered (link to #about)
-//         $("html, body").animate({ scrollTop: sectionAboutPositionY }, "slow");
-//     });
+    buttonRealisations.click(function (e) {
+        e.preventDefault();
+        location.href = '/#realisations';
+    });
 
-//     buttonRealisations.click(function (e) {
-//         let sectionRealisationsPositionY = document.querySelector('section#realisations').offsetTop - headerHeight; // Getting Y of target element
+    buttonContact.click(function (e) {
+        e.preventDefault();
+        location.href = '/#contact';
+    });
 
-//         e.preventDefault(); // The default action of the event will not be triggered (link to #....)
-//         $("html, body").animate({ scrollTop: sectionRealisationsPositionY }, "slow");
-//     });
-
-//     buttonContact.click(function (e) {
-//         let sectionContactPositionY = document.querySelector('section#contact').offsetTop - headerHeight; // Getting Y of target element
-
-//         e.preventDefault(); // The default action of the event will not be triggered (link to #....)
-//         $("html, body").animate({ scrollTop: sectionContactPositionY }, "slow");
-//     });
-
-//     downArrowIcon.click(function (e) {
-//         console.log('ooo');
+    downArrowIcon.click(function (e) {
+        console.log('ooo');
         
-//         let sectionAboutPositionY = document.querySelector('section#about').offsetTop - headerHeight; // Getting Y of target element
+        let sectionAboutPositionY = document.querySelector('section#about').offsetTop - headerHeight; // Getting Y of target element
 
-//         e.preventDefault(); // The default action of the event will not be triggered (link to #about)
-//         $("html, body").animate({ scrollTop: sectionAboutPositionY }, "slow");
-//     });
-// }
+        e.preventDefault(); // The default action of the event will not be triggered (link to #about)
+        $("html, body").animate({ scrollTop: sectionAboutPositionY }, "slow");
+    });
+}
 
 const loadPageTitle = () => {
     const titlePage = $('.photos-realisations h1');
@@ -136,13 +126,12 @@ const manageModal = () => {
     });
 }
 
-// onClickListeners();
+onClickListeners();
 loadPageTitle();
 loadPictures();
-// manageModal();
 
 $(window).on("load", function () {
-    manageModal();
+    manageModal(); // Have to wait that JS load all element before listening on them to open in modal
 });
 
 

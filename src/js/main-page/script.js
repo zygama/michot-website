@@ -25,23 +25,23 @@ const onClickListeners = () => {
     });
 
     buttonAbout.click(function (e) {
-        let sectionAboutPositionY = document.querySelector('section#about').offsetTop - headerHeight; // Getting Y of target element
-
         e.preventDefault(); // The default action of the event will not be triggered (link to #about)
+        const sectionAboutPositionY = document.querySelector('section#about').offsetTop - headerHeight; // Getting Y of target element
+
         $("html, body").animate({ scrollTop: sectionAboutPositionY }, "slow");
     });
 
     buttonRealisations.click(function (e) {
-        let sectionRealisationsPositionY = document.querySelector('section#realisations').offsetTop - headerHeight; // Getting Y of target element
-
         e.preventDefault(); // The default action of the event will not be triggered (link to #....)
+        const sectionRealisationsPositionY = document.querySelector('section#realisations').offsetTop - headerHeight; // Getting Y of target element
+
         $("html, body").animate({ scrollTop: sectionRealisationsPositionY }, "slow");
     });
 
     buttonContact.click(function (e) {
-        let sectionContactPositionY = document.querySelector('section#contact').offsetTop - headerHeight; // Getting Y of target element
-
         e.preventDefault(); // The default action of the event will not be triggered (link to #....)
+        const sectionContactPositionY = document.querySelector('section#contact').offsetTop - headerHeight; // Getting Y of target element
+
         $("html, body").animate({ scrollTop: sectionContactPositionY }, "slow");
     });
 
@@ -130,6 +130,25 @@ const loadPicturesForAllSections = () => {
 onClickListeners();
 loadPicturesForAllSections();
 manageModal();
+
+$(document).ready(function() {
+    // "document.referrer" contains the link of the page which bring user the this page
+    if (document.referrer.indexOf(".html") > 1) { // if user come from another page (index.html isnt considered here)
+        console.log("viens d'ailleurs");
+        $("html, body").animate({ scrollTop: $('html, body').scrollTop() - headerHeight }, 50);
+    }
+    // } else if (document.referrer.indexOf("terrasses.html") > 1) {
+    //     console.log("viens d'ailleurs");
+    //     scrollToAboutSection(false);
+    // } else if (document.referrer.indexOf("sols.html") > 1) {
+    //     console.log("viens d'ailleurs");
+    //     scrollToAboutSection(false);
+    // } else if (document.referrer.indexOf("salles-de-bain.html") > 1) {
+    //     console.log("viens d'ailleurs");
+    //     scrollToAboutSection(false);
+    // }
+});
+
 
 
 
