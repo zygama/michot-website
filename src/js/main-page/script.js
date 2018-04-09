@@ -11,11 +11,8 @@ const headerHeight = 69; // the height of the header to substract in px (70 - 1)
 
 
 const sleep = (p_ms) => {
-    // let startTime = new Date().getTime();
-    // while (new Date().getTime() < startTime + p_ms);
-
     return new Promise( (resolve) => {
-        setTimeout(() => {
+        setTimeout( () => {
             resolve(true);
         }, p_ms);
     });
@@ -49,8 +46,6 @@ const onClickListeners = () => {
     });
 
     downArrowIcon.click(function (e) {
-        console.log('ooo');
-        
         let sectionAboutPositionY = document.querySelector('section#about').offsetTop - headerHeight; // Getting Y of target element
 
         e.preventDefault(); // The default action of the event will not be triggered (link to #about)
@@ -58,29 +53,26 @@ const onClickListeners = () => {
     });
 }
 
-const loadPicturesForSection = (p_placeOfPicture) => {
+const loadPicturesForSection = (p_placeOfPictures) => {
     let fileExt = '.jpg';
     let picturesFiles = {
-        "kitchen": [],
-        "floor": [],
-        "terrace": [],
-        "bathroom": []
+        "cuisines": [],
+        "sols": [],
+        "terrasses": [],
+        "salles-de-bain": []
     };
-
     // picturesPlace will receive the three div which will contain pictures for a taled place (kitchen, bathroom, etc...)
-    let picturesPlace = $(`.${p_placeOfPicture}-picture`);
-    console.log(picturesPlace);
+    let picturesPlace = $(`.${p_placeOfPictures}-picture`);
     
     $.ajax({
         // This will retrieve the contents of the folder if the folder is configured as 'browsable'
-        url: `src/img/photos/${p_placeOfPicture}`,
+        url: `src/img/photos/${p_placeOfPictures}`,
         success: (data) => {
-            $("#fileNames").html('<ul>');
             // List all jpg file names in the page
             $(data).find( `a:contains(${fileExt})` )
                 .each(function (index) {
-                    let filename = this.href.replace(window.location.host, "").replace("http:///", "");
-                    picturesFiles[p_placeOfPicture].push(filename);
+                    let filename = "../" + this.href.replace(window.location.host, "").replace("http:///", "");
+                    picturesFiles[p_placeOfPictures].push(filename);
                     
                     // add the image via background CSS using echoJS (for loading images)
                     picturesPlace.eq(index).attr("data-echo-background", filename); 
@@ -102,6 +94,9 @@ const manageModal = () => {
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     let $picturesToOpenInModal = $('.picture-realisation'); // get all pictures realisation of the section realisation
     let $closeModalButton = $('.modal span');
+
+    console.log($picturesToOpenInModal);
+    
     
     $picturesToOpenInModal.on('click', function () {
         let pictureUrl = $(this).css("background-image"); // Get picture url from thumbnail CSS
@@ -126,10 +121,10 @@ const manageModal = () => {
 }
 
 const loadPicturesForAllSections = () => {
-    loadPicturesForSection("kitchen");
-    loadPicturesForSection("floor");
-    loadPicturesForSection("terrace");
-    loadPicturesForSection("bathroom");
+    loadPicturesForSection("cuisines");
+    loadPicturesForSection("sols");
+    loadPicturesForSection("terrasses");
+    loadPicturesForSection("salles-de-bain");
 }
 
 onClickListeners();

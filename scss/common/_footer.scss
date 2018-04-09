@@ -1,7 +1,9 @@
 // main: main.scss
 
 footer {
-  background-color: $color4;
+  background-color: $footer-color;
+  width: 100%;
+  height: 30px;
 
   .author {
     float: right;

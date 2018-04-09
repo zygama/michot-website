@@ -1,7 +1,7 @@
 // main: main.scss
 
 .banner {
-  background: url("../img/bg-img2.jpg") no-repeat;
+  background: url("../../img/bg-img2.jpg") no-repeat;
   background-position: 50% 48%; // x% y% centring (the best centering I found)
   background-size: cover;
   height: 100vh;
@@ -52,7 +52,6 @@
       
       svg:hover { 
         opacity: 0.5;
-         
       }
     }
   }

@@ -62,29 +62,23 @@
     width: 80%;
     max-width: 700px;
     margin-bottom: 100px; // this way if the picture is ending more than 100% of the height the printing will be nicer
-    // animation-name: zoom-in;     // zoom animation when click on thumbnail picture
-    // animation-duration: 0.6s; // zoom animation when click on thumbnail picture
     animation: zoom-in 0.6s forwards;
   }
 
-  // .picture-in-modal-zoomed-in {
-  //   margin: auto;
-  //   display: block;
-  //   width: 80%;
-  //   max-width: 700px;
-  //   margin-bottom: 100px; // this way if the picture is ending more than 100% of the height the printing will be nicer
-  //   // animation-name: zoom-in;     // zoom animation when click on thumbnail picture
-  //   // animation-duration: 0.6s; // zoom animation when click on thumbnail picture
-  //   animation: zoom-in 0.6s forwards;
-  // }
-
+  // Animation transitions
   @keyframes zoom-in { // zoom in animation when click on thumbnail picture
     0% { transform: scale(0); }
     100% { transform: scale(1); }
   }
   @keyframes zoom-out { // zoom out animation when click on thumbnail picture
-    0% { transform: scale(1); }
-    100% { transform: scale(0); }
+    0% { 
+      transform: scale(1);
+      opacity: 1; // play with opacity to smoother effect
+    }
+    100% { 
+      transform: scale(0); 
+      opacity: 0; // play with opacity to smoother effect
+    }
   }
 
     /* The Close Button */
@@ -104,7 +98,4 @@
       cursor: pointer;
     }
   }
-
-  // Animation transitions
-
 }

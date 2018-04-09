@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <!-- CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/photosRealisations/main.css">
+    <!-- CSS -->
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
+        crossorigin="anonymous"></script>
+    <!-- Fonts -->
+
+    <!-- Meta SEO -->
+    <meta name="description" content="La description de votre site: PRIMORDIAL -> mettre des bons mots clés">
+    <meta name="keywords" content="">
+    <!-- Meta SEO -->
+
+    <!-- Responsive Viewport Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Responsive Viewport Meta Tag -->
+
+    <title>Michot Carrelage - Carreleur Artisan</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-logo">
+            <a href="#" style="display: inline-block;">
+                <div class="logo-company-header">
+                    <object data="./src/img/logo_michot.svg" type="image/svg+xml" style="pointer-events: none;"></object>
+                </div>
+            </a>
+            <a href="#" class="header-logo-text">Michot Carrelage</a>
+        </div>
+        <nav class="header-menu">
+            <a id="link-home" href="#">Accueil</a>
+            <a id="link-about" href="#about">À Propos</a>
+            <a id="link-realisations" href="#realisations">Nos Réalisations</a>
+            <a id="link-contact" href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!-- HEADER -->
+
+    <!-- PHOTOS REALISATIONS CUISINES -->
+    <section id="cuisines" class="photos-realisations">
+        <h1>Réalisations</h1>
+        <div class="pictures-container row">
+            <!-- div images will be append by JavaScript here  -->
+        </div>  
+
+        <!-- Modal to open picture in full size -->
+        <div class="modal">
+            <span class="button-close-modal">&times;</span>
+        
+            <img class="picture-in-modal-zoomed-out">
+        </div>
+        <!-- Modal to open picture in full size -->
+    </section>
+    <!-- PHOTOS REALISATIONS CUISINES -->
+    
+    <!-- FOOTER -->
+    <footer>
+        <p class="author">Conception et réalisation du site
+            <a href="#">Sofiane Lamrani</a>
+        </p>
+    </footer>
+    <!-- FOOTER -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- EchoJS (JavaScript library to load images lazily) -->
+    <script src="node_modules/echo-js/src/echo.js"></script>
+    <script>
+        echo.init({
+            offset: 100,
+            throttle: 250,
+            unload: false,
+            callback: function (element, op) {
+                console.log(element, 'has been', op + 'ed')
+            }
+        });
+    </script>
+    <!-- EchoJS (JavaScript library to load images lazily) -->
+    <!-- My JavaScript  -->
+    <script src="./src/js/photos-realisations/script.js"></script>
+    <!-- My JavaScript  -->
+</body>
+
+</html>
