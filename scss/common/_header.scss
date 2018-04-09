@@ -11,8 +11,13 @@
 
   .header-logo {
     float: left;
+    overflow: hidden;
 
-    .header-logo-text {
+    a {
+      display: inline-block;
+      max-height: 70px;
+
+      .header-logo-text {
       float: right;
       color: $color4;
       text-decoration: none;
@@ -33,6 +38,7 @@
         height: 60px;
         pointer-events: none;
       }
+    }
     }
   }
 

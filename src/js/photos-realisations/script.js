@@ -49,11 +49,14 @@ const onClickListeners = () => {
 }
 
 const loadPageTitle = () => {
-    const titlePage = $('.photos-realisations h1');
+    const $titlePage = $('.photos-realisations h1');
 
-    titlePage.text(`Nos réalisations de ${realisationsPlace}`); // set the value of h1
-    console.log(titlePage);
-    
+    if (realisationsPlace.includes("-")) { // supposed to only match on "salles-de-bain"
+        const dynamicPartOfTitle = realisationsPlace.split("-").join(" "); // split("-") -> ["salles","de","bain"] => join(" ") -> "salles de bain"
+        $titlePage.text(`Nos réalisations de ${dynamicPartOfTitle}`); // set the value of h1
+    } else {
+        $titlePage.text(`Nos réalisations de ${realisationsPlace}`); // set the value of h1
+    }
 }
 
 const loadPictures = () => {
