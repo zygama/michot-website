@@ -1,26 +1,30 @@
 section {
+  text-align: center;
+  padding-top: $headerHeight + 50px;
+  padding-left: 4vw;
+  padding-right: 4vw;
+
+  h1 {
+      padding-bottom: 50px;
+  }
+
+  .pictures-container {
     text-align: center;
-    padding-top: $headerHeight + 50px;
-    padding-left: 5vw;
-    padding-right: 5vw;
+    
+    .picture-realisation {
+      height: 20vw;
+      width: 30vw;
+      min-height: 200px;
+      min-width: 300px;
+      max-height: 240px;
+      max-width: 360px;
 
-    h1 {
-        padding-bottom: 50px;
+      background-position: center;
+      background-size: cover;
+      margin: 10px auto;
+      border-radius: 1px;
+      box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
     }
-
-    .pictures-container {
-      text-align: center;
-
-      .picture-realisation {
-        background-position: center;
-        background-size: cover;
-        height: 240px;
-        width: 360px;
-        margin: 10px auto;
-        border-radius: 1px;
-        box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3);
-        cursor: pointer;
-        margin-bottom: 50px;
-      }
-    }
+  }
 }

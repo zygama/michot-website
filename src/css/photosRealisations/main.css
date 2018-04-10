@@ -1,42 +1,34 @@
-.header {
-  height: 70px;
-  width: 100%;
-  background-color: #222831;
-  line-height: 70px;
-  padding: 0 30px;
-  position: fixed;
-  z-index: 1; }
-  .header .header-logo {
-    float: left;
-    overflow: hidden; }
-    .header .header-logo a {
-      display: inline-block;
-      max-height: 70px; }
-      .header .header-logo a .header-logo-text {
-        float: right;
-        color: #eee;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 500;
-        line-height: 70px; }
-      .header .header-logo a .logo-company-header {
-        float: left;
-        margin-top: 5px;
-        margin-right: 7px;
-        width: 60px;
-        height: 60px; }
-        .header .header-logo a .logo-company-header object {
-          width: 60px;
-          height: 60px;
-          pointer-events: none; }
-  .header .header-menu {
-    float: right; }
-    .header .header-menu a, .header .header-menu span {
+.header-logo {
+  float: left;
+  align-items: center; }
+  .header-logo a {
+    display: inline-block;
+    vertical-align: center; }
+    .header-logo a .header-logo-text {
+      float: right;
       color: #eee;
-      margin-right: 15px;
-      text-decoration: none; }
-      .header .header-menu a:hover, .header .header-menu span:hover {
-        color: #00adb5; }
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500; }
+    .header-logo a .logo-company-header {
+      float: left;
+      margin-top: 5px;
+      margin-right: 7px;
+      width: 60px;
+      height: 60px; }
+      .header-logo a .logo-company-header object {
+        width: 60px;
+        height: 60px;
+        pointer-events: none; }
+
+.header-menu {
+  float: right; }
+  .header-menu li a {
+    color: #eee;
+    margin-right: 15px;
+    text-decoration: none; }
+    .header-menu li a:hover {
+      color: #00adb5; }
 
 footer {
   background-color: rgba(0, 173, 181, 0.8);
@@ -62,7 +54,8 @@ section {
   padding-top: 50px;
   padding-bottom: 50px; }
   section h1 {
-    color: #00adb5; }
+    color: #00adb5;
+    margin-bottom: 30px; }
 
 .section-title {
   text-align: center; }
@@ -125,21 +118,24 @@ section {
 section {
   text-align: center;
   padding-top: 120px;
-  padding-left: 5vw;
-  padding-right: 5vw; }
+  padding-left: 4vw;
+  padding-right: 4vw; }
   section h1 {
     padding-bottom: 50px; }
   section .pictures-container {
     text-align: center; }
     section .pictures-container .picture-realisation {
+      height: 20vw;
+      width: 30vw;
+      min-height: 200px;
+      min-width: 300px;
+      max-height: 240px;
+      max-width: 360px;
       background-position: center;
       background-size: cover;
-      height: 240px;
-      width: 360px;
       margin: 10px auto;
       border-radius: 1px;
       box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-      margin-bottom: 50px; }
+      cursor: pointer; }
 
 /*# sourceMappingURL=main.css.map */

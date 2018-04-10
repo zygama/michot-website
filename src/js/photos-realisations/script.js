@@ -85,7 +85,7 @@ const loadPictures = () => {
                 .each(function (index) {
                     let filepath = "../" + this.href.replace(window.location.host, "").replace("http:///", "");
                     picturesFiles[realisationsPlace].push(filepath);
-                    $picturesContainer.append(`<div class="col-lg-4 col-sm-6"><div class="picture-realisation" data-echo-placeholder="./src/img/loading-placeholder.gif" style="background-image: url('${filepath}');"></div></div>`);
+                    $picturesContainer.append(`<div class="col-lg-4 col-md-6 col-sm-12"><div class="picture-realisation" data-echo-placeholder="./src/img/loading-placeholder.gif" style="background-image: url('${filepath}');"></div></div>`);
                     
                     // add the image via background CSS using echoJS (for loading images)
                     picturesPlace.eq(index).attr("data-echo-background", filepath);

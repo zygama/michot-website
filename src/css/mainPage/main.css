@@ -1,42 +1,32 @@
-.header {
-  height: 70px;
-  width: 100%;
-  background-color: #222831;
-  line-height: 70px;
-  padding: 0 30px;
-  position: fixed;
-  z-index: 1; }
-  .header .header-logo {
-    float: left;
-    overflow: hidden; }
-    .header .header-logo a {
-      display: inline-block;
-      max-height: 70px; }
-      .header .header-logo a .header-logo-text {
-        float: right;
-        color: #eee;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 500;
-        line-height: 70px; }
-      .header .header-logo a .logo-company-header {
-        float: left;
-        margin-top: 5px;
-        margin-right: 7px;
-        width: 60px;
-        height: 60px; }
-        .header .header-logo a .logo-company-header object {
-          width: 60px;
-          height: 60px;
-          pointer-events: none; }
-  .header .header-menu {
-    float: right; }
-    .header .header-menu a, .header .header-menu span {
+header .header-logo {
+  float: left; }
+  header .header-logo a {
+    display: inline-block;
+    vertical-align: center; }
+    header .header-logo a .header-logo-text {
+      float: right;
       color: #eee;
-      margin-right: 15px;
-      text-decoration: none; }
-      .header .header-menu a:hover, .header .header-menu span:hover {
-        color: #00adb5; }
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500; }
+    header .header-logo a .logo-company-header {
+      float: left;
+      margin-top: 5px;
+      margin-right: 7px;
+      width: 60px;
+      height: 60px; }
+      header .header-logo a .logo-company-header object {
+        width: 60px;
+        height: 60px;
+        pointer-events: none; }
+header .header-menu {
+  float: right; }
+  header .header-menu li a {
+    color: #eee;
+    margin-right: 15px;
+    text-decoration: none; }
+    header .header-menu li a:hover {
+      color: #00adb5; }
 
 footer {
   background-color: rgba(0, 173, 181, 0.8);
@@ -62,7 +52,8 @@ section {
   padding-top: 50px;
   padding-bottom: 50px; }
   section h1 {
-    color: #00adb5; }
+    color: #00adb5;
+    margin-bottom: 30px; }
 
 .section-title {
   text-align: center; }
@@ -71,11 +62,12 @@ section {
   background: url("../../img/bg-img2.jpg") no-repeat;
   background-position: 50% 48%;
   background-size: cover;
-  height: 100vh; }
+  height: 100vh;
+  max-width: 100vw; }
   .banner .banner-content {
     color: #eee; }
     .banner .banner-content .inline-block-home {
-      padding-top: 20vh;
+      padding-top: 200px;
       align-items: center;
       margin-left: 0;
       margin-right: 0; }
@@ -86,7 +78,8 @@ section {
       font-size: 2.0vw;
       font-weight: 400; }
     .banner .banner-content .logo-company-banner object {
-      width: 28vw; }
+      width: 28vw;
+      min-width: 300px; }
 @keyframes arrow-animation {
   0% {
     transform: translateY(0); }
@@ -98,7 +91,7 @@ section {
       color: #00adb5;
       font-size: 50px;
       position: absolute;
-      top: 85vh;
+      top: 88vh;
       z-index: 0;
       width: 100%;
       text-align: center;
@@ -106,13 +99,44 @@ section {
       .banner .banner-content #arrow-down-icon svg:hover {
         opacity: 0.5; }
 
+@media (max-width: 992px) {
+  .banner .banner-content .inline-block-home {
+    text-align: center;
+    padding-top: 150px; }
+  .banner .banner-content .banner-text {
+    padding-top: 50px; }
+    .banner .banner-content .banner-text h1 {
+      font-size: 25px;
+      font-weight: medium; }
+    .banner .banner-content .banner-text h2 {
+      font-size: 21px;
+      font-weight: 400; } }
+@media (max-width: 768px) {
+  .banner .banner-content .inline-block-home {
+    padding-top: 16vw; }
+  .banner .banner-content .banner-text h1 {
+    font-size: 25px;
+    font-weight: medium; }
+  .banner .banner-content .banner-text h2 {
+    font-size: 21px;
+    font-weight: 400; } }
+@media (max-width: 540px) {
+  .banner .banner-content .inline-block-home {
+    padding-top: 26vw; }
+  .banner .banner-content .banner-text h1 {
+    font-size: 20px;
+    font-weight: medium; }
+  .banner .banner-content .banner-text h2 {
+    font-size: 17px;
+    font-weight: 400; } }
 .about {
   text-align: center; }
 
 .realisations-container {
+  overflow: hidden;
   background-color: #393e46;
-  padding-left: 5vw;
-  padding-right: 5vw; }
+  padding-left: 4vw;
+  padding-right: 4vw; }
   .realisations-container .realisations-heading {
     text-align: center;
     color: #eee; }
@@ -127,10 +151,14 @@ section {
     .realisations-container .gallery-pictures .pictures-container {
       text-align: center; }
       .realisations-container .gallery-pictures .pictures-container .picture-realisation {
+        height: 20vw;
+        width: 30vw;
+        min-height: 200px;
+        min-width: 300px;
+        max-height: 240px;
+        max-width: 360px;
         background-position: center;
         background-size: cover;
-        height: 240px;
-        width: 360px;
         margin: 10px auto;
         border-radius: 1px;
         box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3);

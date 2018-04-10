@@ -5,21 +5,22 @@
   background-position: 50% 48%; // x% y% centring (the best centering I found)
   background-size: cover;
   height: 100vh;
+  max-width: 100vw; // without this a horizontal scrollbar appear
 
   .banner-content {
     color: $color4;
 
     .inline-block-home {
-      padding-top: 20vh;
-      align-items: center;
+      padding-top: 200px;
+      align-items: center; // align horizontaly
       margin-left: 0;   // Hack to avoid the problem of horizontal overflow
       margin-right: 0;  // Hack to avoid the problem of horizontal overflow
     }
 
     .banner-text {
       h1 {
-      font-weight: medium;
-      font-size: 3.0vw;
+        font-weight: medium;
+        font-size: 3.0vw;
       }
       
       h2 {
@@ -31,6 +32,7 @@
     .logo-company-banner {
       object {
         width: 28vw;
+        min-width: 300px;
       }
     }
 
@@ -44,7 +46,7 @@
       color: $color3;
       font-size: 50px;
       position: absolute;  // absolute to be placed where I want
-      top: 85vh;           // Arrow placed at the bottom of the page
+      top: 88vh;           // Arrow placed at the bottom of the page
       z-index: 0;
       width: 100%;
       text-align: center;
@@ -53,6 +55,66 @@
       svg:hover { 
         opacity: 0.5;
       }
+    }
+  }
+}
+
+@media (max-width: $col-lg) {
+  .banner {
+    .banner-content {
+      .inline-block-home {
+        text-align: center;
+        padding-top: 150px;
+      }
+      .banner-text {
+        padding-top: 50px;
+        h1 {
+          font-size: 25px;
+          font-weight: medium;
+        }
+        h2 {
+          font-size: 21px;
+          font-weight: 400;
+        }
+      }      
+    }
+  }
+}
+@media (max-width: $col-md) {
+  .banner {
+    .banner-content {
+      .inline-block-home {
+        padding-top: 16vw;
+      }
+      .banner-text {
+        h1 {
+          font-size: 25px;
+          font-weight: medium;
+        }
+        h2 {
+          font-size: 21px;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}
+@media (max-width: $col-sm) {
+  .banner {
+    .banner-content {  
+      .inline-block-home {
+        padding-top: 26vw;
+      }    
+      .banner-text {
+        h1 {
+          font-size: 20px;
+          font-weight: medium;
+        }
+        h2 {
+          font-size: 17px;
+          font-weight: 400;
+        }
+      } 
     }
   }
 }

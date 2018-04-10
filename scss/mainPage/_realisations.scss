@@ -1,9 +1,10 @@
 // main: main.scss
 
 .realisations-container {
+  overflow: hidden; // hacky to avoid the pb when for 2 certain small horizontal size interval, horizontal scrollbar appear
   background-color: $color2;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 4vw;
+  padding-right: 4vw;
 
   .realisations-heading {
     text-align: center;
@@ -25,12 +26,17 @@
 
     .pictures-container {
       text-align: center;
-
+      
       .picture-realisation {
+        height: 20vw;
+        width: 30vw;
+        min-height: 200px;
+        min-width: 300px;
+        max-height: 240px;
+        max-width: 360px;
+
         background-position: center;
         background-size: cover;
-        height: 240px;
-        width: 360px;
         margin: 10px auto;
         border-radius: 1px;
         box-shadow: 0 10px 6px -5px rgba(0, 0, 0, 0.3);

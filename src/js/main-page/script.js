@@ -137,19 +137,4 @@ $(document).ready(function() {
         console.log("viens d'ailleurs");
         $("html, body").animate({ scrollTop: $('html, body').scrollTop() - headerHeight }, 50);
     }
-    // } else if (document.referrer.indexOf("terrasses.html") > 1) {
-    //     console.log("viens d'ailleurs");
-    //     scrollToAboutSection(false);
-    // } else if (document.referrer.indexOf("sols.html") > 1) {
-    //     console.log("viens d'ailleurs");
-    //     scrollToAboutSection(false);
-    // } else if (document.referrer.indexOf("salles-de-bain.html") > 1) {
-    //     console.log("viens d'ailleurs");
-    //     scrollToAboutSection(false);
-    // }
 });
-
-
-
-
-
