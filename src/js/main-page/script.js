@@ -7,7 +7,7 @@ const buttonRealisations = $("#link-realisations");
 const buttonContact = $("#link-contact");
 const downArrowIcon = $("#arrow-down-icon");
 
-const headerHeight = 69; // the height of the header to substract in px (70 - 1)
+const headerHeight = 56; // the height of the header to substract in px (70 - 1)
 
 
 const sleep = (p_ms) => {

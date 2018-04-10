@@ -1,62 +1,3 @@
-// // main: main.scss
-
-// .header {
-//   height: 70px;
-//   width: 100%;
-//   background-color: $color1;
-//   line-height: 70px;
-//   padding: 0 30px; // (top-bot) / (left-right)
-//   position: fixed;
-//   z-index: 1;
-
-//   .header-logo {
-//     float: left;
-//     overflow: hidden;
-
-//     a {
-//       display: inline-block;
-//       max-height: 70px;
-
-//       .header-logo-text {
-//         float: right;
-//         color: $color4;
-//         text-decoration: none;
-//         text-transform: uppercase;
-//         font-weight: 500;
-//         line-height: 70px;
-//       }
-
-//       .logo-company-header {
-//         float: left;
-//         margin-top: 5px;
-//         margin-right: 7px;
-//         width: 60px;
-//         height: 60px;
-
-//         object {
-//           width: 60px;
-//           height: 60px;
-//           pointer-events: none;
-//         }
-//       }
-//     }
-//   }
-
-//   .header-menu {
-//     float: right;
-
-//     a, span {
-//       color: $color4;
-//       margin-right: 15px;
-//       text-decoration: none;
-
-//       &:hover {
-//         color: $color3;
-//       }
-//     }
-//   }
-// }
-
 // main: main.scss
 
 header {
@@ -65,33 +6,10 @@ header {
   .header-logo {
     float: left;
 
-    a {
-      display: inline-block;
-      vertical-align: center;
-
-      .header-logo-text {
-        float: right;
-        color: $color4;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 500;
-        // line-height: 70px;
-      }
-
-      .logo-company-header {
-        float: left;
-        margin-top: 5px;
-        margin-right: 7px;
-        width: 60px;
-        height: 60px;
-
-        object {
-          width: 60px;
-          height: 60px;
-          pointer-events: none;
+    img {
+          max-width: 300px;
+          margin-left: 15px;
         }
-      }
-    }
   }
 
   .header-menu {
